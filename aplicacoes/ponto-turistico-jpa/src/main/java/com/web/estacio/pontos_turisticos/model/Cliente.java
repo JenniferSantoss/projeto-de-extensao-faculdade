@@ -1,10 +1,34 @@
 package com.web.estacio.pontos_turisticos.model;
 
+import jakarta.persistence.*;
 
+@Entity
 public class Cliente {
+    public Cliente() {
+        super();
+    }
 
+    public Cliente(Long cliente_id, String nome, String email, String genero, String profissao, String pais_origem, String idioma, String faixa_etaria, Double renda, String estado_civil, Integer frequencia_viagens, String tipo_viajant, String preferencia_acomodaca) {
+        this.cliente_id = cliente_id;
+        this.nome = nome;
+        this.email = email;
+        this.genero = genero;
+        this.profissao = profissao;
+        this.pais_origem = pais_origem;
+        this.idioma = idioma;
+        this.faixa_etaria = faixa_etaria;
+        this.renda = renda;
+        this.estado_civil = estado_civil;
+        this.frequencia_viagens = frequencia_viagens;
+        this.tipo_viajant = tipo_viajant;
+        this.preferencia_acomodaca = preferencia_acomodaca;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cliente_id;
 
+    @Column(nullable=false)
     private String nome;
     
     private String email;
