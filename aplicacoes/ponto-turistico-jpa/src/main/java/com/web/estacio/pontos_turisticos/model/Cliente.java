@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDate;
 
 @Data //substitui os getters e setters
 @Entity
@@ -42,7 +43,7 @@ public class Cliente {
     
     private String email;
 
-   // data_nascimento DATE,
+    private LocalDate date;
 
     private String genero;
 
@@ -52,7 +53,7 @@ public class Cliente {
 
     private String idioma;
 
-    //data_cadastro TIMESTAMP DEFAULT NOW(),
+    private LocalDate data_cadastro;
 
     private String faixa_etaria;
 
