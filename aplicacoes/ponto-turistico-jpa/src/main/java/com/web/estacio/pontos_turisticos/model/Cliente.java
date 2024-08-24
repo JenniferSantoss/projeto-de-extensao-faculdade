@@ -8,8 +8,13 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 public class Cliente {
+
     public Cliente() {
         super();
+    }
+
+    public Cliente(Long cliente_id){
+        this.cliente_id = cliente_id;
     }
 
     public Cliente(Long cliente_id, String nome, String email, String genero, String profissao, String pais_origem, String idioma, String faixa_etaria, Double renda, String estado_civil, Integer frequencia_viagens, String tipo_viajant, String preferencia_acomodaca) {
