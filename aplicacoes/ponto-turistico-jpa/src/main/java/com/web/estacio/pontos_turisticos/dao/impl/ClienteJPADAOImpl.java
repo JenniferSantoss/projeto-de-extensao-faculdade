@@ -7,37 +7,14 @@ import java.util.List;
 
 public class ClienteJPADAOImpl extends GenericJPADAOImpl<Cliente> implements ClienteJPADAO {
 
-    public ClienteJPADAOImpl(){
-        super(Cliente.class);
-    }
-
-
-
-
 
     @Override
-    public void delete(Long client_id) {
-        delete(new Cliente(client_id));
-    }
-
-
-    @Override
-    public Cliente find(int id) {
-        return null;
+    public void delete(Long cliente_id) {
+          delete(new Cliente(cliente_id));
     }
 
     @Override
-    public List<Cliente> find() {
-        return List.of();
-    }
-
-    @Override
-    public Cliente findByCpf(String cpf) {
-        return null;
-    }
-
-    @Override
-    public List<Cliente> findByNome(String str) {
-        return List.of();
+    public Cliente find(Long cliente_id) {
+        return find(cliente_id);
     }
 }

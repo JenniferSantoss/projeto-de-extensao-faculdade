@@ -14,7 +14,5 @@ public interface ClienteJPADAO {
 
     List<Cliente> find();
 
-    Cliente findByCpf(String cpf);
 
-    List<Cliente> findByNome(String str);
 }

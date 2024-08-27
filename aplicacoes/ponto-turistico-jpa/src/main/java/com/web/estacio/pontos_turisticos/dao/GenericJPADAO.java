@@ -1,14 +1,27 @@
 package com.web.estacio.pontos_turisticos.dao;
 
+import jakarta.persistence.EntityManager;
+
 import java.util.List;
 
-public interface GenericJPADAO {
-    public void save(T entity);
-    public void delete(T entity);
-    public T find(Object id);
-    public List<T> find();
-    public void beginTransaction();
-    public void commit();
-    public void rollback();
-    public void close();
+public interface GenericJPADAO<T> {
+
+    EntityManager getEntityManager();
+
+    void closeEntityManager();
+
+    void beginTransaction();
+
+    void commit();
+
+    void rollback();
+
+    void save(T entity);
+
+    void delete(T entity);
+    T find(Object id);
+
+    List<T> find();
+
+
 }
