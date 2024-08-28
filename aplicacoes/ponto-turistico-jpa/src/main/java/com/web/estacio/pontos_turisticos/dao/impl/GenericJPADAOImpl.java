@@ -19,7 +19,7 @@ public class GenericJPADAOImpl<T> implements GenericJPADAO<T> {
 
     private static final EntityManagerFactory emf;
 
-    private static ThreadLocal<EntityManager> ems = new ThreadLocal<EntityManager>();
+    private static ThreadLocal<EntityManager>  ems = new ThreadLocal<EntityManager>();
 
     static {
         Properties props = Config.getConfig();
@@ -37,9 +37,7 @@ public class GenericJPADAOImpl<T> implements GenericJPADAO<T> {
         this.persistentClass = persistentClass;
     }
 
-    /**
-     * Obtém o EntityManager vinculado à  Thread atual. Se não existir, é criado e vinculado à Thread atual.
-     */
+
     @Override
     public EntityManager getEntityManager() {
         EntityManager em = ems.get();

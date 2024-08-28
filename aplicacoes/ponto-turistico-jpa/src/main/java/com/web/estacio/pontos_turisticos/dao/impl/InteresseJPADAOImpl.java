@@ -5,7 +5,8 @@ import com.web.estacio.pontos_turisticos.model.Interesse;
 
 public class InteresseJPADAOImpl extends GenericJPADAOImpl<Interesse> implements InteresseJPADAO {
 
-    InteresseJPADAOImpl() {
+
+    public InteresseJPADAOImpl() {
         super(Interesse.class);
     }
 

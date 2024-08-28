@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @Data //substitui os getters e setters
 @Entity
 public class Interesse {
+
     public Interesse() {
         super();
     }
