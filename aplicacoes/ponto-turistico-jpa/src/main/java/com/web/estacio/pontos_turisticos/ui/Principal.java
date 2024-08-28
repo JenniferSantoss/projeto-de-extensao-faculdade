@@ -10,12 +10,12 @@ public class Principal {
     public static void main(String[] args) {
         StringBuilder menu = new StringBuilder("Escolha uma opção:\n")
                 .append("1 - Interesses\n")
-                .append("2 - Atualizar por CPF\n")
-                .append("3 - Remover por CPF\n")
-                .append("4 - Exibir por CPF\n")
-                .append("5 - Exibir por id\n")
-                .append("6 - Exibir todos\n")
-                .append("7 - Exibir todos que contem determinado nome\n")
+                .append("2 - Avaliacoes\n")
+                .append("3 - Atividades\n")
+                .append("4 - Localizacao\n")
+                .append("5 - Reservas\n")
+                .append("6 - Meio de Transporte\n")
+                .append("7 - Exibir todos\n")
                 .append("8 - Sair");
 
 
